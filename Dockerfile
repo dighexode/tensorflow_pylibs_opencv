@@ -3,12 +3,11 @@ MAINTAINER dighexode <dighexode@163.com>
 
 RUN apt-get update && \
     # Dependencies
-    apt-get install -y --no-install-recommends \
+    apt-get install -y --no-install-recommends build-essential cmake \
     python3-tk && \
-	libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev \
+    libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev \
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libgtk2.0-dev \
     liblapacke-dev checkinstall && \
-	apt-get install -f && \
     apt clean && \
     apt autoremove && \
     rm -rf /var/lib/apt/lists/*
